@@ -312,7 +312,7 @@ Page({
     // 页面初始化 options为页面跳转所带来的参数
 
     shopDialogInfo = this.data.shopSelectInfo;
-    var name;
+    var name = "";
     var size = shopDialogInfo.selectInfoAttributeList.length;
     for (var i = 0; i < size; i++) {
       selectIndexArray.push({ key: i, value: shopDialogInfo.selectInfoAttributeList[i].AttributeNameList[0].Name });

@@ -1,5 +1,11 @@
 /* pages/shopinfo/shopinfo.wxss */
-
+page{
+  overflow: hidden;
+  height: 100%;
+}
+.scroll{
+  height: 100%;
+}
 .tianmao {
   background-color: red;
   padding: 10rpx;

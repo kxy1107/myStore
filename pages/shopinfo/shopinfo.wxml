@@ -26,14 +26,14 @@
 
       <!--商品属性列表-->
       <view class="ui-width-100 ">
-        <block wx:for="{{shopSelectInfo.selectInfoAttributeList}}" wx:for-index = "shopSelectIndex">
+        <block wx:for="{{shopSelectInfo.selectInfoAttributeList}}" wx:for-index="shopSelectIndex">
           <view class="ui-width-100 ui-padding-10" style="height:{{item.height}}">
             <view>
               <text>{{item.AttributeName}}</text>
             </view>
             <view class="ui-flex">
-              <block wx:for="{{item.AttributeNameList}}" >
-                 <view class="{{item.IsSelect ? 'select-info-attr-list-name-press' : 'select-info-attr-list-name'}} " data-select-index = "{{shopSelectIndex}}"   data-attr-index = "{{index}}" data-attr-id="{{item.AttributeID}}" catchtap = "clickAttr">{{item.Name}}</view>
+              <block wx:for="{{item.AttributeNameList}}">
+                <view class="{{item.IsSelect ? 'select-info-attr-list-name-press' : 'select-info-attr-list-name'}} " data-select-index="{{shopSelectIndex}}" data-attr-index="{{index}}" data-attr-id="{{item.AttributeID}}" catchtap="clickAttr">{{item.Name}}</view>
               </block>
             </view>
             <view class="line ui-mt-30"></view>
@@ -47,9 +47,9 @@
           <text>购买数量</text>
         </view>
         <view class="ui-flex">
-          <view class="num-subtraction " catchtap = "shopCountSub">-</view>
+          <view class="num-subtraction " catchtap="shopCountSub">-</view>
           <text>{{shopBuyCount}}</text>
-          <view class="num-add" catchtap = "shopCountAdd">+</view>
+          <view class="num-add" catchtap="shopCountAdd">+</view>
         </view>
       </view>
       <view class="line ui-mt-30"></view>
@@ -57,6 +57,7 @@
     <button class="select-info-sumbit ui-mt-30" bindtap="sumbitShopInfo" type="primary">确定</button>
   </view>
 </view>
+<scroll-view scroll-y = "true" class = "scroll">
 <view class="shop-info-content">
 
   <!--轮播图-->
@@ -129,3 +130,4 @@
     </block>
   </view>
 </view>
+</scroll-view>
